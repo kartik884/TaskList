@@ -30,10 +30,6 @@ Here's a walkthrough of implemented user stories:
 
 <img src='http://imgur.com/a/Ue7fW' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-## Notes
-
-Describe any challenges encountered while building the app.
-
 ## License
 
     Copyright [yyyy] [name of copyright owner]
