@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.knyamagoudar.tasklist.ui.MainActivity"
+    >
+
+    <!--Button
+        android:text="Add Item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onAddItem"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/btnAddItem" /-->
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/lvItems"
+        android:layout_below="@+id/llMainActivityHeader" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/titleBackgroundColor"
+        android:id="@+id/llMainActivityHeader"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="30dp"
+            android:src="@drawable/todo_list"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:id="@+id/imageView" />
+
+        <TextView
+            android:text="TaskList"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView3"
+            android:textAppearance="@style/HeaderTextAppearance"
+            android:gravity="center_vertical"
+            android:layout_weight="0.9"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:src="@drawable/plus_circle"
+            android:layout_gravity="right|center"
+            android:id="@+id/add"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_height="30dp"
+            android:paddingRight="5dp"
+            android:background="@color/titleBackgroundColor"
+            android:onClick="addItemActicty"/>
+
+    </LinearLayout>
+
+    <!--EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:hint="Enter New Item"
+        android:id="@+id/etNewItem"
+        tools:text="Enter a new item"
+        android:layout_below="@+id/lvItems"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#000000"/-->
+</RelativeLayout>

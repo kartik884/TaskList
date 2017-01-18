@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.knyamagoudar.tasklist.ui.AddTask">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/titleBackgroundColor"
+        android:id="@+id/llTaskActivitHeader">
+        <ImageButton
+            android:layout_width="30dp"
+            android:src="@drawable/back"
+            android:layout_gravity="right|center"
+            android:id="@+id/backButton"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_height="30dp"
+            android:paddingRight="5dp"
+            android:background="@color/titleBackgroundColor"
+            android:onClick="onBackBtn"/>
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/list_icon"
+            android:id="@+id/imageView" />
+
+        <TextView
+            android:text="TaskList"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView3"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:gravity="center_vertical"
+            android:layout_weight="0.6"/>
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:src="@drawable/save"
+            android:layout_gravity="right|center"
+            android:id="@+id/save"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_height="match_parent"
+            android:paddingRight="15dp"
+            android:background="@color/titleBackgroundColor"
+            android:onClick="onSaveTask"
+            android:layout_weight="0.1"/>
+        <ImageButton
+            android:layout_width="25dp"
+            android:src="@drawable/error"
+            android:layout_gravity="right|center"
+            android:id="@+id/cancel_action"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:background="@color/titleBackgroundColor"
+            android:onClick="onCancelAction"
+            android:layout_weight="0.1"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@+id/llTaskActivitHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/activity_task_viewer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.knyamagoudar.tasklist.ui.AddTask">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="22dp"
+                android:id="@+id/taskNameLayout"
+                android:weightSum="1">
+
+                <TextView
+                    android:text="Task Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textView4"
+                    android:gravity="left|center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_gravity="left|center"
+                    android:paddingRight="20dp"
+                    />
+
+                <EditText
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:layout_gravity="right|center"
+                    android:id="@+id/etTaskName"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/taskNameLayout"
+                android:paddingTop="20dp"
+                android:id="@+id/datePickerLayout">
+
+                <TextView
+                    android:text="Due Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textView5"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:paddingRight="20dp"
+                    />
+
+                <DatePicker
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dpDueDate"
+                    android:layout_gravity="right"
+                    android:scaleX="0.95"
+                    style="@style/date_picker_theme"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/datePickerLayout"
+                android:id="@+id/llTaskNotes"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:text="Task Notes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvTextNotes"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_gravity="left|center"
+                    android:paddingRight="15dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:layout_gravity="right|center"
+                    android:id="@+id/etTaskNotes"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llPriorty"
+                android:orientation="horizontal"
+                android:paddingTop="20dp"
+                android:layout_below="@+id/llTaskNotes">
+
+                <TextView
+                    android:text="Priority"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tvPriority"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_gravity="left|center"
+                    android:paddingRight="35dp"/>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/llPriorty"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/spPriority" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llStatus"
+                android:orientation="horizontal"
+                android:layout_below="@+id/llPriorty"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:text="Status"
+                    android:layout_width="97dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvStatus"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_gravity="left|center"
+                    android:paddingRight="35dp"/>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llPriorty"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/spStatus" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
+
