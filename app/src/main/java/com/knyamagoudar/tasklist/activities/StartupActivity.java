@@ -1,4 +1,4 @@
-package com.knyamagoudar.tasklist.ui;
+package com.knyamagoudar.tasklist.activities;
 
 import android.app.Activity;
 import android.content.Intent;

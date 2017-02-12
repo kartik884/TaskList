@@ -1,4 +1,4 @@
-package com.knyamagoudar.tasklist.data;
+package com.knyamagoudar.tasklist.models;
 
 import java.io.Serializable;
 import java.util.Date;

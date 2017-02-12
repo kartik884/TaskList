@@ -2,8 +2,10 @@
 
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context="com.knyamagoudar.tasklist.fragments.EditFragment">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical" android:layout_width="match_parent"
@@ -31,7 +33,7 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/list_icon"
+                android:src="@drawable/todo_list"
                 android:id="@+id/imageView" />
 
             <TextView
@@ -39,7 +41,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/textView3"
-                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textAppearance="@style/HeaderTextAppearance"
+                android:textColor="#FFFFFF"
                 android:gravity="center_vertical"
                 android:layout_weight="0.6"/>
 
@@ -54,6 +57,7 @@
                 android:paddingRight="15dp"
                 android:background="@color/titleBackgroundColor"
                 android:layout_weight="0.1"/>
+
             <ImageButton
                 android:layout_width="25dp"
                 android:src="@drawable/error"

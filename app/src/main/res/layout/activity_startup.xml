@@ -10,6 +10,6 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@color/titleBackgroundColor"
-    tools:context="com.knyamagoudar.tasklist.ui.StartupActivity">
+    tools:context="com.knyamagoudar.tasklist.activities.StartupActivity">
 
 </RelativeLayout>

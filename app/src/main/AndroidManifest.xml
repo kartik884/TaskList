@@ -10,20 +10,20 @@
         android:theme="@style/AppTheme"
 
         >
-        <activity android:name=".ui.MainActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.StartupActivity">
+        <activity android:name=".activities.StartupActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.AddTask"></activity>
-        <activity android:name=".ui.ViewTask"
+        <activity android:name=".activities.AddTaskActivity"></activity>
+        <activity android:name=".activities.ViewTaskActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"></activity>
     </application>
 

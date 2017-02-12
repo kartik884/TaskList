@@ -1,4 +1,4 @@
-package com.knyamagoudar.tasklist.ui;
+package com.knyamagoudar.tasklist.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,8 +13,8 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 
 import com.knyamagoudar.tasklist.R;
-import com.knyamagoudar.tasklist.data.TaskList;
-import com.knyamagoudar.tasklist.util.CustomInterface;
+import com.knyamagoudar.tasklist.models.TaskList;
+import com.knyamagoudar.tasklist.interfaces.CustomInterface;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

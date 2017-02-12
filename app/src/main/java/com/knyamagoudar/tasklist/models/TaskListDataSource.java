@@ -1,10 +1,12 @@
-package com.knyamagoudar.tasklist.data;
+package com.knyamagoudar.tasklist.models;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.knyamagoudar.tasklist.utils.MySQLiteHelper;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

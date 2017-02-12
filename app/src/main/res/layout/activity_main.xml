@@ -4,7 +4,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.knyamagoudar.tasklist.ui.MainActivity"
+    tools:context="com.knyamagoudar.tasklist.activities.MainActivity"
     >
 
     <!--Button
@@ -50,6 +50,7 @@
             android:layout_height="match_parent"
             android:id="@+id/textView3"
             android:textAppearance="@style/HeaderTextAppearance"
+            android:textColor="#FFFFFF"
             android:gravity="center_vertical"
             android:layout_weight="0.9"/>
 

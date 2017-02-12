@@ -1,4 +1,4 @@
-package com.knyamagoudar.tasklist.ui;
+package com.knyamagoudar.tasklist.activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,9 +8,9 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.knyamagoudar.tasklist.R;
-import com.knyamagoudar.tasklist.data.TaskList;
-import com.knyamagoudar.tasklist.data.TaskListDataSource;
-import com.knyamagoudar.tasklist.util.TaskAdapter;
+import com.knyamagoudar.tasklist.models.TaskList;
+import com.knyamagoudar.tasklist.models.TaskListDataSource;
+import com.knyamagoudar.tasklist.adapters.TaskAdapter;
 
 
 import java.util.ArrayList;
@@ -35,12 +35,12 @@ public class MainActivity extends Activity {
     }
 
     public void addItemActicty(View v){
-        Intent intent = new Intent(this,AddTask.class);
+        Intent intent = new Intent(this,AddTaskActivity.class);
         startActivity(intent);
     }
 
     public void viewItemActivity(View v,TaskList t){
-        Intent intent = new Intent(this,ViewTask.class);
+        Intent intent = new Intent(this,ViewTaskActivity.class);
         intent.putExtra("Task", t);
         startActivity(intent);
     }

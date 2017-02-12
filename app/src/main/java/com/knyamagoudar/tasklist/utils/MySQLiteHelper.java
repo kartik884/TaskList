@@ -1,4 +1,4 @@
-package com.knyamagoudar.tasklist.data;
+package com.knyamagoudar.tasklist.utils;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

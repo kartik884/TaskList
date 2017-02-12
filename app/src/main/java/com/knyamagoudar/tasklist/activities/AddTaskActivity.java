@@ -1,4 +1,4 @@
-package com.knyamagoudar.tasklist.ui;
+package com.knyamagoudar.tasklist.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,13 +9,13 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.knyamagoudar.tasklist.R;
-import com.knyamagoudar.tasklist.data.TaskList;
-import com.knyamagoudar.tasklist.data.TaskListDataSource;
+import com.knyamagoudar.tasklist.models.TaskList;
+import com.knyamagoudar.tasklist.models.TaskListDataSource;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class AddTask extends Activity {
+public class AddTaskActivity extends Activity {
 
     TaskListDataSource taskListDataSource;
 

@@ -1,6 +1,6 @@
-package com.knyamagoudar.tasklist.util;
+package com.knyamagoudar.tasklist.interfaces;
 
-import com.knyamagoudar.tasklist.data.TaskList;
+import com.knyamagoudar.tasklist.models.TaskList;
 
 /**
  * Created by knyamagoudar on 1/16/17.

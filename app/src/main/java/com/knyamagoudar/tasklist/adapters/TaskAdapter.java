@@ -1,6 +1,7 @@
-package com.knyamagoudar.tasklist.util;
+package com.knyamagoudar.tasklist.adapters;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.knyamagoudar.tasklist.R;
-import com.knyamagoudar.tasklist.data.TaskList;
+import com.knyamagoudar.tasklist.models.TaskList;
 
 import java.util.ArrayList;
 
@@ -40,6 +41,14 @@ public class TaskAdapter extends ArrayAdapter<TaskList>{
         // Populate the data into the template view using the data object
         tvTaskName.setText(task.getTaskName());
         tvTaskPriority.setText(task.getPriority());
+
+        if(new String(task.getPriority()).equals("High")){
+            tvTaskPriority.setTextColor(Color.parseColor("#E62D10"));
+        }if(new String(task.getPriority()).equals("Medium")){
+            tvTaskPriority.setTextColor(Color.parseColor("#5990F0"));
+        }if(new String(task.getPriority()).equals("Low")){
+            tvTaskPriority.setTextColor(Color.parseColor("#76E385"));
+        }
         // Return the completed view to render on screen
         return convertView;
 
